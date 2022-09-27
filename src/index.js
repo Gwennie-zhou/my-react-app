@@ -3,7 +3,8 @@ import ReactDom from "react-dom";
 // import ClassComp from "./components/base/class-comp"
 // import FunctionComp from "./components/base/function-comp"
 // import App from "./components/app"
-import EventBind from "../src/components/event-binding/index"
+// import EventBind from "../src/components/event-binding/index"
+import Ref from "./components/ref/index"
 
 // ReactDom.render("11", document.querySelector("#root"))
 // ReactDom.render(<h1>哈哈</h1>, document.querySelector("#root"))
@@ -20,7 +21,8 @@ import EventBind from "../src/components/event-binding/index"
 //  ReactDom.render(<ClassComp></ClassComp>, document.querySelector("#root"))
 // ReactDom.render(<FunctionComp></FunctionComp>, document.querySelector('#root'))
 // ReactDom.render(<App></App>, document.querySelector('#root'))
-ReactDom.render(<EventBind></EventBind>, document.querySelector('#root'))
+// ReactDom.render(<EventBind></EventBind>, document.querySelector('#root'))
+ReactDom.render(<Ref></Ref>, document.querySelector('#root'))
 
 /**
  * 以上即为jsx文件  jsx = js + xml 
