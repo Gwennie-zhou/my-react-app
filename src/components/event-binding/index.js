@@ -10,19 +10,19 @@ export default class eventBind extends Component {
         <button onClick={() => {
             console.log('dd')
         }}>add1</button>
-        {/* 第二种写法：在{}里写函数名,切记一定不能加括号，因为不是由我们自己手动调用，而是在我们点击按钮时浏览器自动帮我们调用 ，然后函数声明在原型上
-        此种方式的声明由弊端：当遇到函数内用到this时将会有问题,因为此时的this为undefined，原因是函数内的this并不是指向当前eventBind类的实例对象，因为是react中事件代理对象调用的此函数
+        {/* 第二种写法：在{}里写函数名,切记一定不能加括号，因为不是由我们自己手动调用，而是在我们点击按钮时react内部的事件系统自动帮我们调用的*/
+        <button onClick={this.add2}>add2</button>
+
+        /*此种方式的声明由弊端：当遇到函数内用到this时将会有问题,因为此时的this为undefined，原因是函数内的this并不是指向当前eventBind类的实例对象，因为是react中事件代理对象调用的此函数
 
         react并不会真正的绑定事件到某个具体的元素身上，而是采用事件代理的方式，将事件绑定在根节点root身上
         同样会有事件对象，不过这是react内部自己构建的，其属性和方法与原生浏览器的事件对象基本一致
         */}
-        <button onClick={this.add2}>add2</button>
         {/* 若是想将函数内的this指向实例对象，可以这样做 */}
+
         <button onClick={this.add2.bind(this)}>add2</button>
 
-        {/* 第三种写法：函数声明在实例对象上 */}
-        <button onClick={this.add3}>add3</button>
-        {/* 第四种写法 --推荐*/}
+        {/* 第三种写法 --推荐*/}
         <button onClick={() => {
             this.add4()
         }}>add4</button>
