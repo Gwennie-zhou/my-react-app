@@ -15,6 +15,15 @@ class Navbar extends Component{
         }
         return (
             // 若是想在这里表达js逻辑，则需用{} 包围起来，否则只会被当作普通的文本,相当于vue中的{{}}语法,注意：{}里只能写js表达式，不能写代码块
+
+            // 什么是js表达式？
+            // 1个表达式会产生一个值，可以放在任何1个需要值的地方，可以定义一个变量去接收它
+            // 例如： 
+            // （1）变量：如a
+            // （2）运算符： 如a+b 
+            // （3）函数调用：如add()、arr.map()
+            // （4）函数表达式： function add() {}
+
             <div>
                 {/* 原生行内样式写法： style="color: red; background-color: green"
                 react中如果想要用行内样式，必须写成对象形式
